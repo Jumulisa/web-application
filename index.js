@@ -1,7 +1,7 @@
-// Array to store tasks
+//  storig tasks
 let tasks = [];
 
-// Function to add a new task
+// adding a new task
 function addTask() {
     const taskInput = document.getElementById("taskInput");
     const taskText = taskInput.value.trim();
@@ -44,7 +44,7 @@ addTaskButton.addEventListener("click", addTask);
 // Initial rendering of tasks
 renderTasks();
 
-// Function to delete a task
+// deleting a task
 function deleteTask(index) {
     tasks.splice(index, 1); // Remove task from the array
     renderTasks(); // Re-render tasks
@@ -71,7 +71,7 @@ function renderTasks() {
         });
         li.appendChild(deleteButton);
 
-        // Add click event listener to toggle task completion
+        //  clicking event listener to toggle task completion
         li.addEventListener("click", () => toggleTask(index));
 
         taskList.appendChild(li);
